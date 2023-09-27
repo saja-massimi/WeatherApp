@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model WeatherApp.Models.CityModel;
+
+@{
+    ViewData["Title"] = "City";
+}
+
+<div class="container">
+
+    <div class="container">
+        <div class="form-group col-md-offset-3 col-md-5">
+
+            <h2>Forecast For selected City</h2>
+
+            <label asp-for="name"></label>
+            <span class="badge alert-primary">@Model.name</span> <br/>
+
+             <label asp-for="Temprature"></label>
+            <span class="badge alert-primary">@Model.Temprature °</span> <br/>
+
+             <label asp-for="Humiditiy"></label>
+            <span class="badge alert-primary">@Model.Humiditiy</span> <br/>
+
+             <label asp-for="Pressure"></label>
+            <span class="badge alert-primary">@Model.Pressure Hpa </span> <br/>
+
+             <label asp-for="Wind"></label>
+            <span class="badge alert-primary">@Model.Wind</span> <br/>
+
+             <label asp-for="Weather"></label>
+            <span class="badge alert-primary">@Model.Weather</span> <br/>
+
+            <form method="get">
+           <button asp-controller="WeatherForecastController" asp-action="SearchByCity" class="btn-primary btn-primary">Go Back</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+</div>
